@@ -1,0 +1,23 @@
+You need to extract the maximum amplitude from the waveforms in the raw_data folder.
+
+Use the library obspy to read the waveforms
+
+Example code on how to read the amplitude
+
+
+from obspy.core import read
+
+st=read('data path/filename.mseed')
+st.filter("highpass", freq=2.0)    # you could test different values
+
+
+st1=st.select(channel='E')
+st2=st.select(channel='N')
+
+
+for tr1,tr2 in zip(st1,st2):
+    Ax=num.max(num.abs(tr1.data))
+    Ay=num.max(num.abs(tr2.data))
+    Amax=num.max(Ax,Ay)
+
+This code should be launched within a for all the events of the catalogue.
