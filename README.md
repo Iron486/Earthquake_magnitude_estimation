@@ -1,4 +1,7 @@
 # Earthquake_magnitude_estimation
+
+The goal of the project was the estimation of the magnitude of the earthquakes given some features extracted from the seismic catalogue and the seismic traces. 
+
 "Earthquake magnitude estimation" and "earthquake magnitude estimation2" are the notebooks 
 that brought to the main results obtained for earthquake magnitude estimation. 
 
